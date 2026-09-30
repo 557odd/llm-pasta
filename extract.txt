@@ -1,0 +1,672 @@
+SUBJECT: I
+|
++-- 1. SUBJECT DEFINITION
+|   |
+|   +-- 1.1 Subject Identity
+|   |   +-- 1.1.1 Subject label
+|   |   +-- 1.1.2 Subject name
+|   |   +-- 1.1.3 Subject symbol
+|   |   +-- 1.1.4 Subject abbreviation
+|   |   +-- 1.1.5 Subject alias
+|   |   +-- 1.1.6 Subject namespace
+|   |   +-- 1.1.7 Subject version
+|   |   +-- 1.1.8 Subject status
+|   |
+|   +-- 1.2 Subject Boundary
+|   |   +-- 1.2.1 Included objects
+|   |   +-- 1.2.2 Excluded objects
+|   |   +-- 1.2.3 Inclusion rule
+|   |   +-- 1.2.4 Exclusion rule
+|   |   +-- 1.2.5 Boundary exception
+|   |   +-- 1.2.6 Boundary ambiguity
+|   |
+|   +-- 1.3 Subject Context
+|       +-- 1.3.1 Source context
+|       +-- 1.3.2 Operational context
+|       +-- 1.3.3 Analytical context
+|       +-- 1.3.4 Temporal context
+|       +-- 1.3.5 Technical context
+|       +-- 1.3.6 Semantic context
+|
++-- 2. DATASET DEFINITION
+|   |
+|   +-- 2.1 Dataset Identity
+|   |   +-- 2.1.1 Dataset name
+|   |   +-- 2.1.2 Dataset identifier
+|   |   +-- 2.1.3 Dataset version
+|   |   +-- 2.1.4 Dataset owner
+|   |   +-- 2.1.5 Dataset source
+|   |   +-- 2.1.6 Dataset status
+|   |
+|   +-- 2.2 Dataset Boundary
+|   |   +-- 2.2.1 First record
+|   |   +-- 2.2.2 Last record
+|   |   +-- 2.2.3 Record delimiter
+|   |   +-- 2.2.4 Field delimiter
+|   |   +-- 2.2.5 Opening delimiter
+|   |   +-- 2.2.6 Closing delimiter
+|   |   +-- 2.2.7 Truncated boundary
+|   |   +-- 2.2.8 Unclosed boundary
+|   |
+|   +-- 2.3 Dataset Population
+|       +-- 2.3.1 Observed record
+|       +-- 2.3.2 Valid record
+|       +-- 2.3.3 Invalid record
+|       +-- 2.3.4 Empty record
+|       +-- 2.3.5 Duplicate record
+|       +-- 2.3.6 Unique record
+|       +-- 2.3.7 Partial record
+|       +-- 2.3.8 Contaminated record
+|
++-- 3. IDENTIFIER OBJECT
+|   |
+|   +-- 3.1 Identifier Identity
+|   |   +-- 3.1.1 Identifier value
+|   |   +-- 3.1.2 Identifier position
+|   |   +-- 3.1.3 Identifier ordinal
+|   |   +-- 3.1.4 Identifier label
+|   |   +-- 3.1.5 Identifier namespace
+|   |   +-- 3.1.6 Identifier type
+|   |   +-- 3.1.7 Identifier status
+|   |
+|   +-- 3.2 Identifier Form
+|   |   +-- 3.2.1 Raw form
+|   |   +-- 3.2.2 Trimmed form
+|   |   +-- 3.2.3 Normalized form
+|   |   +-- 3.2.4 Canonical form
+|   |   +-- 3.2.5 Display form
+|   |   +-- 3.2.6 Comparison form
+|   |
+|   +-- 3.3 Identifier Boundary
+|       +-- 3.3.1 Start position
+|       +-- 3.3.2 End position
+|       +-- 3.3.3 Leading character
+|       +-- 3.3.4 Trailing character
+|       +-- 3.3.5 Leading whitespace
+|       +-- 3.3.6 Trailing whitespace
+|       +-- 3.3.7 Adjacent punctuation
+|       +-- 3.3.8 Embedded line break
+|
++-- 4. CHARACTER TAXONOMY
+|   |
+|   +-- 4.1 Character Unit
+|   |   +-- 4.1.1 Character value
+|   |   +-- 4.1.2 Character position
+|   |   +-- 4.1.3 Character code point
+|   |   +-- 4.1.4 Character byte value
+|   |   +-- 4.1.5 Character category
+|   |   +-- 4.1.6 Character script
+|   |   +-- 4.1.7 Character case
+|   |
+|   +-- 4.2 ASCII Character
+|   |   +-- 4.2.1 Decimal digit
+|   |   |   +-- 4.2.1.1 Digit 0
+|   |   |   +-- 4.2.1.2 Digit 1
+|   |   |   +-- 4.2.1.3 Digit 2
+|   |   |   +-- 4.2.1.4 Digit 3
+|   |   |   +-- 4.2.1.5 Digit 4
+|   |   |   +-- 4.2.1.6 Digit 5
+|   |   |   +-- 4.2.1.7 Digit 6
+|   |   |   +-- 4.2.1.8 Digit 7
+|   |   |   +-- 4.2.1.9 Digit 8
+|   |   |   +-- 4.2.1.10 Digit 9
+|   |   |
+|   |   +-- 4.2.2 Lowercase hexadecimal letter
+|   |   |   +-- 4.2.2.1 Letter a
+|   |   |   +-- 4.2.2.2 Letter b
+|   |   |   +-- 4.2.2.3 Letter c
+|   |   |   +-- 4.2.2.4 Letter d
+|   |   |   +-- 4.2.2.5 Letter e
+|   |   |   +-- 4.2.2.6 Letter f
+|   |   |
+|   |   +-- 4.2.3 Non-hexadecimal ASCII letter
+|   |   +-- 4.2.4 ASCII punctuation
+|   |   +-- 4.2.5 ASCII whitespace
+|   |   +-- 4.2.6 ASCII control character
+|   |
+|   +-- 4.3 Non-ASCII Character
+|       +-- 4.3.1 Latin extended letter
+|       +-- 4.3.2 Diacritic-bearing letter
+|       +-- 4.3.3 Combining mark
+|       +-- 4.3.4 Precomposed character
+|       +-- 4.3.5 Non-Latin character
+|       +-- 4.3.6 Replacement character
+|       +-- 4.3.7 Invisible Unicode character
+|       +-- 4.3.8 Directional control character
+|
++-- 5. LEXICAL STRUCTURE
+|   |
+|   +-- 5.1 Token
+|   |   +-- 5.1.1 Token value
+|   |   +-- 5.1.2 Token index
+|   |   +-- 5.1.3 Token length
+|   |   +-- 5.1.4 Token type
+|   |   +-- 5.1.5 Token validity
+|   |   +-- 5.1.6 Token boundary
+|   |
+|   +-- 5.2 Token Segment
+|   |   +-- 5.2.1 Prefix
+|   |   +-- 5.2.2 Interior
+|   |   +-- 5.2.3 Suffix
+|   |   +-- 5.2.4 Repeated segment
+|   |   +-- 5.2.5 Unique segment
+|   |   +-- 5.2.6 Interrupted segment
+|   |
+|   +-- 5.3 Separator
+|       +-- 5.3.1 Comma
+|       +-- 5.3.2 Space
+|       +-- 5.3.3 Line break
+|       +-- 5.3.4 Parenthesis
+|       +-- 5.3.5 Colon
+|       +-- 5.3.6 Slash
+|       +-- 5.3.7 Percent sign
+|       +-- 5.3.8 Unexpected separator
+|       +-- 5.3.9 Missing separator
+|
++-- 6. LENGTH TAXONOMY
+|   |
+|   +-- 6.1 Raw Length
+|   |   +-- 6.1.1 Byte count
+|   |   +-- 6.1.2 Code-point count
+|   |   +-- 6.1.3 Grapheme count
+|   |   +-- 6.1.4 Visible-character count
+|   |
+|   +-- 6.2 Normalized Length
+|   |   +-- 6.2.1 Trimmed length
+|   |   +-- 6.2.2 Separator-free length
+|   |   +-- 6.2.3 ASCII-only length
+|   |   +-- 6.2.4 Hexadecimal-only length
+|   |
+|   +-- 6.3 Length Class
+|       +-- 6.3.1 Expected length
+|       +-- 6.3.2 Short length
+|       +-- 6.3.3 Long length
+|       +-- 6.3.4 Empty length
+|       +-- 6.3.5 Odd length
+|       +-- 6.3.6 Even length
+|       +-- 6.3.7 Variable length
+|       +-- 6.3.8 Indeterminate length
+|
++-- 7. FORMAT TAXONOMY
+|   |
+|   +-- 7.1 Candidate Format
+|   |   +-- 7.1.1 Hexadecimal candidate
+|   |   +-- 7.1.2 Digest candidate
+|   |   +-- 7.1.3 Arbitrary token candidate
+|   |   +-- 7.1.4 Composite candidate
+|   |   +-- 7.1.5 Truncated candidate
+|   |   +-- 7.1.6 Corrupted candidate
+|   |   +-- 7.1.7 Unknown candidate
+|   |
+|   +-- 7.2 Hexadecimal Conformance
+|   |   +-- 7.2.1 Fully hexadecimal
+|   |   +-- 7.2.2 Predominantly hexadecimal
+|   |   +-- 7.2.3 Partially hexadecimal
+|   |   +-- 7.2.4 Non-hexadecimal
+|   |   +-- 7.2.5 Lowercase hexadecimal
+|   |   +-- 7.2.6 Uppercase hexadecimal
+|   |   +-- 7.2.7 Mixed-case hexadecimal
+|   |
+|   +-- 7.3 Structural Conformance
+|       +-- 7.3.1 Valid delimiter placement
+|       +-- 7.3.2 Invalid delimiter placement
+|       +-- 7.3.3 Valid character set
+|       +-- 7.3.4 Invalid character set
+|       +-- 7.3.5 Valid length
+|       +-- 7.3.6 Invalid length
+|       +-- 7.3.7 Complete token
+|       +-- 7.3.8 Incomplete token
+|
++-- 8. ENCODING TAXONOMY
+|   |
+|   +-- 8.1 Character Encoding
+|   |   +-- 8.1.1 Encoding declaration
+|   |   +-- 8.1.2 Detected encoding
+|   |   +-- 8.1.3 Encoding confidence
+|   |   +-- 8.1.4 Encoding mismatch
+|   |   +-- 8.1.5 Invalid byte sequence
+|   |
+|   +-- 8.2 Unicode Normalization
+|   |   +-- 8.2.1 Original normalization form
+|   |   +-- 8.2.2 NFC form
+|   |   +-- 8.2.3 NFD form
+|   |   +-- 8.2.4 NFKC form
+|   |   +-- 8.2.5 NFKD form
+|   |   +-- 8.2.6 Normalization change
+|   |
+|   +-- 8.3 Case Normalization
+|       +-- 8.3.1 Original case
+|       +-- 8.3.2 Lowercase form
+|       +-- 8.3.3 Uppercase form
+|       +-- 8.3.4 Case-folded form
+|       +-- 8.3.5 Case-sensitive equality
+|       +-- 8.3.6 Case-insensitive equality
+|
++-- 9. VALIDITY TAXONOMY
+|   |
+|   +-- 9.1 Syntactic Validity
+|   |   +-- 9.1.1 Valid syntax
+|   |   +-- 9.1.2 Invalid syntax
+|   |   +-- 9.1.3 Indeterminate syntax
+|   |   +-- 9.1.4 Missing syntax rule
+|   |
+|   +-- 9.2 Lexical Validity
+|   |   +-- 9.2.1 Allowed character
+|   |   +-- 9.2.2 Disallowed character
+|   |   +-- 9.2.3 Allowed delimiter
+|   |   +-- 9.2.4 Disallowed delimiter
+|   |   +-- 9.2.5 Escaped character
+|   |   +-- 9.2.6 Unescaped character
+|   |
+|   +-- 9.3 Structural Validity
+|   |   +-- 9.3.1 Complete structure
+|   |   +-- 9.3.2 Partial structure
+|   |   +-- 9.3.3 Broken structure
+|   |   +-- 9.3.4 Ambiguous structure
+|   |
+|   +-- 9.4 Semantic Validity
+|       +-- 9.4.1 Defined meaning
+|       +-- 9.4.2 Undefined meaning
+|       +-- 9.4.3 Conflicting meaning
+|       +-- 9.4.4 Unverifiable meaning
+|
++-- 10. ANOMALY TAXONOMY
+|   |
+|   +-- 10.1 Character Anomaly
+|   |   +-- 10.1.1 Unexpected letter
+|   |   +-- 10.1.2 Unexpected digit
+|   |   +-- 10.1.3 Unexpected punctuation
+|   |   +-- 10.1.4 Unexpected whitespace
+|   |   +-- 10.1.5 Unexpected diacritic
+|   |   +-- 10.1.6 Invisible character
+|   |   +-- 10.1.7 Confusable character
+|   |   +-- 10.1.8 Replacement character
+|   |
+|   +-- 10.2 Length Anomaly
+|   |   +-- 10.2.1 Missing character
+|   |   +-- 10.2.2 Extra character
+|   |   +-- 10.2.3 Truncated prefix
+|   |   +-- 10.2.4 Truncated suffix
+|   |   +-- 10.2.5 Concatenated token
+|   |   +-- 10.2.6 Split token
+|   |
+|   +-- 10.3 Delimiter Anomaly
+|   |   +-- 10.3.1 Missing comma
+|   |   +-- 10.3.2 Extra comma
+|   |   +-- 10.3.3 Missing space
+|   |   +-- 10.3.4 Extra space
+|   |   +-- 10.3.5 Unexpected line break
+|   |   +-- 10.3.6 Missing closing delimiter
+|   |
+|   +-- 10.4 Encoding Anomaly
+|       +-- 10.4.1 Mojibake
+|       +-- 10.4.2 Double encoding
+|       +-- 10.4.3 Invalid decoding
+|       +-- 10.4.4 Unicode substitution
+|       +-- 10.4.5 Normalization mismatch
+|       +-- 10.4.6 Script contamination
+|
++-- 11. PATTERN TAXONOMY
+|   |
+|   +-- 11.1 Character Pattern
+|   |   +-- 11.1.1 Character frequency
+|   |   +-- 11.1.2 Character position frequency
+|   |   +-- 11.1.3 Repeated character
+|   |   +-- 11.1.4 Consecutive repetition
+|   |   +-- 11.1.5 Alternating sequence
+|   |   +-- 11.1.6 Character absence
+|   |
+|   +-- 11.2 Segment Pattern
+|   |   +-- 11.2.1 Shared prefix
+|   |   +-- 11.2.2 Shared suffix
+|   |   +-- 11.2.3 Shared interior segment
+|   |   +-- 11.2.4 Repeated substring
+|   |   +-- 11.2.5 Mirrored substring
+|   |   +-- 11.2.6 Shifted substring
+|   |
+|   +-- 11.3 Distribution Pattern
+|       +-- 11.3.1 Digit distribution
+|       +-- 11.3.2 Letter distribution
+|       +-- 11.3.3 Symbol distribution
+|       +-- 11.3.4 Position distribution
+|       +-- 11.3.5 Length distribution
+|       +-- 11.3.6 Anomaly distribution
+|
++-- 12. SIMILARITY TAXONOMY
+|   |
+|   +-- 12.1 Exact Similarity
+|   |   +-- 12.1.1 Raw equality
+|   |   +-- 12.1.2 Normalized equality
+|   |   +-- 12.1.3 Canonical equality
+|   |   +-- 12.1.4 Case-folded equality
+|   |
+|   +-- 12.2 Positional Similarity
+|   |   +-- 12.2.1 Matching position
+|   |   +-- 12.2.2 Mismatching position
+|   |   +-- 12.2.3 Position shift
+|   |   +-- 12.2.4 Position insertion
+|   |   +-- 12.2.5 Position deletion
+|   |
+|   +-- 12.3 Edit Similarity
+|   |   +-- 12.3.1 Character insertion
+|   |   +-- 12.3.2 Character deletion
+|   |   +-- 12.3.3 Character substitution
+|   |   +-- 12.3.4 Character transposition
+|   |
+|   +-- 12.4 Segment Similarity
+|       +-- 12.4.1 Prefix similarity
+|       +-- 12.4.2 Suffix similarity
+|       +-- 12.4.3 Substring similarity
+|       +-- 12.4.4 N-gram similarity
+|
++-- 13. DUPLICATION TAXONOMY
+|   |
+|   +-- 13.1 Exact Duplicate
+|   |   +-- 13.1.1 First occurrence
+|   |   +-- 13.1.2 Repeated occurrence
+|   |   +-- 13.1.3 Duplicate group
+|   |   +-- 13.1.4 Duplicate frequency
+|   |
+|   +-- 13.2 Normalized Duplicate
+|   |   +-- 13.2.1 Whitespace-normalized duplicate
+|   |   +-- 13.2.2 Case-normalized duplicate
+|   |   +-- 13.2.3 Unicode-normalized duplicate
+|   |   +-- 13.2.4 Separator-normalized duplicate
+|   |
+|   +-- 13.3 Near Duplicate
+|       +-- 13.3.1 Single-edit variant
+|       +-- 13.3.2 Multi-edit variant
+|       +-- 13.3.3 Truncated variant
+|       +-- 13.3.4 Contaminated variant
+|       +-- 13.3.5 Confusable-character variant
+|
++-- 14. RELATIONSHIP TAXONOMY
+|   |
+|   +-- 14.1 Membership Relationship
+|   |   +-- 14.1.1 Identifier belongs to dataset
+|   |   +-- 14.1.2 Character belongs to identifier
+|   |   +-- 14.1.3 Segment belongs to identifier
+|   |   +-- 14.1.4 Anomaly belongs to identifier
+|   |
+|   +-- 14.2 Sequence Relationship
+|   |   +-- 14.2.1 Precedes
+|   |   +-- 14.2.2 Follows
+|   |   +-- 14.2.3 Immediately precedes
+|   |   +-- 14.2.4 Immediately follows
+|   |   +-- 14.2.5 First in sequence
+|   |   +-- 14.2.6 Last in sequence
+|   |
+|   +-- 14.3 Derivation Relationship
+|   |   +-- 14.3.1 Raw-to-trimmed
+|   |   +-- 14.3.2 Trimmed-to-normalized
+|   |   +-- 14.3.3 Normalized-to-canonical
+|   |   +-- 14.3.4 Original-to-corrected
+|   |
+|   +-- 14.4 Similarity Relationship
+|       +-- 14.4.1 Equal to
+|       +-- 14.4.2 Similar to
+|       +-- 14.4.3 Different from
+|       +-- 14.4.4 Possible variant of
+|       +-- 14.4.5 Possible duplicate of
+|
++-- 15. PROVENANCE TAXONOMY
+|   |
+|   +-- 15.1 Source
+|   |   +-- 15.1.1 Source system
+|   |   +-- 15.1.2 Source document
+|   |   +-- 15.1.3 Source field
+|   |   +-- 15.1.4 Source location
+|   |   +-- 15.1.5 Source owner
+|   |   +-- 15.1.6 Source reliability
+|   |
+|   +-- 15.2 Acquisition
+|   |   +-- 15.2.1 Acquisition method
+|   |   +-- 15.2.2 Acquisition event
+|   |   +-- 15.2.3 Acquisition timestamp
+|   |   +-- 15.2.4 Acquisition operator
+|   |   +-- 15.2.5 Acquisition error
+|   |
+|   +-- 15.3 Transformation History
+|       +-- 15.3.1 Transformation type
+|       +-- 15.3.2 Input value
+|       +-- 15.3.3 Output value
+|       +-- 15.3.4 Transformation rule
+|       +-- 15.3.5 Transformation timestamp
+|       +-- 15.3.6 Reversibility status
+|
++-- 16. QUALITY TAXONOMY
+|   |
+|   +-- 16.1 Accuracy
+|   |   +-- 16.1.1 Verified accurate
+|   |   +-- 16.1.2 Suspected inaccurate
+|   |   +-- 16.1.3 Confirmed inaccurate
+|   |   +-- 16.1.4 Accuracy unknown
+|   |
+|   +-- 16.2 Completeness
+|   |   +-- 16.2.1 Complete value
+|   |   +-- 16.2.2 Missing prefix
+|   |   +-- 16.2.3 Missing interior
+|   |   +-- 16.2.4 Missing suffix
+|   |   +-- 16.2.5 Missing metadata
+|   |
+|   +-- 16.3 Consistency
+|   |   +-- 16.3.1 Internally consistent
+|   |   +-- 16.3.2 Structurally inconsistent
+|   |   +-- 16.3.3 Lexically inconsistent
+|   |   +-- 16.3.4 Semantically inconsistent
+|   |
+|   +-- 16.4 Uniqueness
+|   |   +-- 16.4.1 Unique raw value
+|   |   +-- 16.4.2 Unique normalized value
+|   |   +-- 16.4.3 Duplicate raw value
+|   |   +-- 16.4.4 Duplicate normalized value
+|   |
+|   +-- 16.5 Traceability
+|       +-- 16.5.1 Fully traceable
+|       +-- 16.5.2 Partially traceable
+|       +-- 16.5.3 Untraceable
+|       +-- 16.5.4 Conflicting provenance
+|
++-- 17. VALIDATION RULE TAXONOMY
+|   |
+|   +-- 17.1 Presence Rule
+|   |   +-- 17.1.1 Value required
+|   |   +-- 17.1.2 Value optional
+|   |   +-- 17.1.3 Null prohibited
+|   |   +-- 17.1.4 Empty value prohibited
+|   |
+|   +-- 17.2 Character Rule
+|   |   +-- 17.2.1 Digit allowed
+|   |   +-- 17.2.2 Hexadecimal letter allowed
+|   |   +-- 17.2.3 Non-hexadecimal letter prohibited
+|   |   +-- 17.2.4 Punctuation prohibited
+|   |   +-- 17.2.5 Whitespace prohibited
+|   |   +-- 17.2.6 Non-ASCII character prohibited
+|   |
+|   +-- 17.3 Length Rule
+|   |   +-- 17.3.1 Minimum length
+|   |   +-- 17.3.2 Maximum length
+|   |   +-- 17.3.3 Exact length
+|   |   +-- 17.3.4 Permitted length set
+|   |   +-- 17.3.5 Even-length requirement
+|   |
+|   +-- 17.4 Pattern Rule
+|   |   +-- 17.4.1 Prefix rule
+|   |   +-- 17.4.2 Suffix rule
+|   |   +-- 17.4.3 Character-class rule
+|   |   +-- 17.4.4 Delimiter rule
+|   |   +-- 17.4.5 Regular-expression rule
+|   |
+|   +-- 17.5 Uniqueness Rule
+|       +-- 17.5.1 Raw uniqueness required
+|       +-- 17.5.2 Normalized uniqueness required
+|       +-- 17.5.3 Duplicate permitted
+|       +-- 17.5.4 Duplicate prohibited
+|
++-- 18. CORRECTION TAXONOMY
+|   |
+|   +-- 18.1 Safe Normalization
+|   |   +-- 18.1.1 Trim outer whitespace
+|   |   +-- 18.1.2 Standardize line endings
+|   |   +-- 18.1.3 Normalize Unicode
+|   |   +-- 18.1.4 Standardize case
+|   |   +-- 18.1.5 Remove approved separators
+|   |
+|   +-- 18.2 Conditional Correction
+|   |   +-- 18.2.1 Remove confirmed contaminant
+|   |   +-- 18.2.2 Replace confirmed confusable
+|   |   +-- 18.2.3 Join confirmed split token
+|   |   +-- 18.2.4 Split confirmed merged tokens
+|   |   +-- 18.2.5 Restore confirmed character
+|   |
+|   +-- 18.3 Correction Governance
+|       +-- 18.3.1 Preserve original value
+|       +-- 18.3.2 Record corrected value
+|       +-- 18.3.3 Record correction reason
+|       +-- 18.3.4 Record correction rule
+|       +-- 18.3.5 Record correction actor
+|       +-- 18.3.6 Record correction timestamp
+|       +-- 18.3.7 Record confidence level
+|       +-- 18.3.8 Support rollback
+|
++-- 19. CLASSIFICATION OUTPUT
+|   |
+|   +-- 19.1 Record Classification
+|   |   +-- 19.1.1 Valid
+|   |   +-- 19.1.2 Invalid
+|   |   +-- 19.1.3 Suspicious
+|   |   +-- 19.1.4 Truncated
+|   |   +-- 19.1.5 Contaminated
+|   |   +-- 19.1.6 Duplicate
+|   |   +-- 19.1.7 Unknown
+|   |
+|   +-- 19.2 Anomaly Classification
+|   |   +-- 19.2.1 Character anomaly
+|   |   +-- 19.2.2 Length anomaly
+|   |   +-- 19.2.3 Delimiter anomaly
+|   |   +-- 19.2.4 Encoding anomaly
+|   |   +-- 19.2.5 Structural anomaly
+|   |   +-- 19.2.6 Semantic anomaly
+|   |
+|   +-- 19.3 Confidence Classification
+|       +-- 19.3.1 Confirmed
+|       +-- 19.3.2 High confidence
+|       +-- 19.3.3 Medium confidence
+|       +-- 19.3.4 Low confidence
+|       +-- 19.3.5 Unresolved
+|
++-- 20. INDEX TAXONOMY
+|   |
+|   +-- 20.1 Primary Index
+|   |   +-- 20.1.1 Raw identifier index
+|   |   +-- 20.1.2 Canonical identifier index
+|   |   +-- 20.1.3 Positional index
+|   |
+|   +-- 20.2 Secondary Index
+|   |   +-- 20.2.1 Length index
+|   |   +-- 20.2.2 Prefix index
+|   |   +-- 20.2.3 Suffix index
+|   |   +-- 20.2.4 Character index
+|   |   +-- 20.2.5 Anomaly index
+|   |   +-- 20.2.6 Classification index
+|   |
+|   +-- 20.3 Cross-Reference Index
+|       +-- 20.3.1 Duplicate-group index
+|       +-- 20.3.2 Similarity-group index
+|       +-- 20.3.3 Source index
+|       +-- 20.3.4 Transformation index
+|       +-- 20.3.5 Validation-result index
+|
++-- 21. KNOWLEDGE GRAPH TAXONOMY
+|   |
+|   +-- 21.1 Node Type
+|   |   +-- 21.1.1 Subject node
+|   |   +-- 21.1.2 Dataset node
+|   |   +-- 21.1.3 Identifier node
+|   |   +-- 21.1.4 Character node
+|   |   +-- 21.1.5 Segment node
+|   |   +-- 21.1.6 Anomaly node
+|   |   +-- 21.1.7 Rule node
+|   |   +-- 21.1.8 Source node
+|   |
+|   +-- 21.2 Edge Type
+|   |   +-- 21.2.1 Contains
+|   |   +-- 21.2.2 Precedes
+|   |   +-- 21.2.3 Matches
+|   |   +-- 21.2.4 Differs from
+|   |   +-- 21.2.5 Derived from
+|   |   +-- 21.2.6 Violates
+|   |   +-- 21.2.7 Corrected to
+|   |   +-- 21.2.8 Originates from
+|   |
+|   +-- 21.3 Graph Property
+|       +-- 21.3.1 Node identifier
+|       +-- 21.3.2 Node label
+|       +-- 21.3.3 Edge identifier
+|       +-- 21.3.4 Edge label
+|       +-- 21.3.5 Relationship confidence
+|       +-- 21.3.6 Provenance pointer
+|
++-- 22. AUDIT TAXONOMY
+|   |
+|   +-- 22.1 Audit Event
+|   |   +-- 22.1.1 Ingestion event
+|   |   +-- 22.1.2 Validation event
+|   |   +-- 22.1.3 Normalization event
+|   |   +-- 22.1.4 Correction event
+|   |   +-- 22.1.5 Classification event
+|   |   +-- 22.1.6 Export event
+|   |
+|   +-- 22.2 Audit Attribute
+|   |   +-- 22.2.1 Event identifier
+|   |   +-- 22.2.2 Event type
+|   |   +-- 22.2.3 Event timestamp
+|   |   +-- 22.2.4 Event actor
+|   |   +-- 22.2.5 Input state
+|   |   +-- 22.2.6 Output state
+|   |   +-- 22.2.7 Reason
+|   |
+|   +-- 22.3 Reproducibility
+|       +-- 22.3.1 Rule version
+|       +-- 22.3.2 Software version
+|       +-- 22.3.3 Configuration version
+|       +-- 22.3.4 Input snapshot
+|       +-- 22.3.5 Output snapshot
+|       +-- 22.3.6 Reproduction result
+|
++-- 23. DELIVERABLE TAXONOMY
+    |
+    +-- 23.1 Machine-Readable Output
+    |   +-- 23.1.1 Raw records
+    |   +-- 23.1.2 Normalized records
+    |   +-- 23.1.3 Validation results
+    |   +-- 23.1.4 Anomaly records
+    |   +-- 23.1.5 Relationship records
+    |   +-- 23.1.6 Audit records
+    |
+    +-- 23.2 Human-Readable Output
+    |   +-- 23.2.1 Taxonomy report
+    |   +-- 23.2.2 Record inventory
+    |   +-- 23.2.3 Anomaly register
+    |   +-- 23.2.4 Duplicate register
+    |   +-- 23.2.5 Correction register
+    |   +-- 23.2.6 Validation summary
+    |
+    +-- 23.3 Atomic Record Schema
+        +-- 23.3.1 Record ID
+        +-- 23.3.2 Original value
+        +-- 23.3.3 Normalized value
+        +-- 23.3.4 Canonical value
+        +-- 23.3.5 Sequence position
+        +-- 23.3.6 Character count
+        +-- 23.3.7 Byte count
+        +-- 23.3.8 Character-set class
+        +-- 23.3.9 Format class
+        +-- 23.3.10 Validity class
+        +-- 23.3.11 Anomaly class
+        +-- 23.3.12 Duplicate group
+        +-- 23.3.13 Similarity group
+        +-- 23.3.14 Source reference
+        +-- 23.3.15 Correction status
+        +-- 23.3.16 Confidence status
+        +-- 23.3.17 Audit reference
