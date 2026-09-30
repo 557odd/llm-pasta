@@ -1,0 +1,928 @@
+SUBJECT: I
+|
++-- 24. QUANTUM COMPUTATION DEFINITION
+|   |
+|   +-- 24.1 Computation Identity
+|   |   +-- 24.1.1 Computation name
+|   |   +-- 24.1.2 Computation identifier
+|   |   +-- 24.1.3 Computation version
+|   |   +-- 24.1.4 Computation family
+|   |   +-- 24.1.5 Computational model
+|   |   +-- 24.1.6 Implementation language
+|   |   +-- 24.1.7 Provider namespace
+|   |   +-- 24.1.8 Computation status
+|   |
+|   +-- 24.2 Computational Model
+|   |   +-- 24.2.1 Gate-based model
+|   |   +-- 24.2.2 Measurement-based model
+|   |   +-- 24.2.3 Adiabatic model
+|   |   +-- 24.2.4 Quantum annealing model
+|   |   +-- 24.2.5 Analog quantum simulation
+|   |   +-- 24.2.6 Hybrid quantum-classical model
+|   |   +-- 24.2.7 Distributed quantum model
+|   |   +-- 24.2.8 Unknown computational model
+|   |
+|   +-- 24.3 Computation Boundary
+|       +-- 24.3.1 Classical input boundary
+|       +-- 24.3.2 Quantum preparation boundary
+|       +-- 24.3.3 Quantum execution boundary
+|       +-- 24.3.4 Measurement boundary
+|       +-- 24.3.5 Classical post-processing boundary
+|       +-- 24.3.6 Iteration boundary
+|       +-- 24.3.7 Termination boundary
+|       +-- 24.3.8 External-service boundary
+|
++-- 25. QUANTUM INFORMATION OBJECT
+|   |
+|   +-- 25.1 Quantum Unit
+|   |   +-- 25.1.1 Qubit
+|   |   +-- 25.1.2 Qutrit
+|   |   +-- 25.1.3 Qudit
+|   |   +-- 25.1.4 Continuous-variable mode
+|   |   +-- 25.1.5 Logical qubit
+|   |   +-- 25.1.6 Physical qubit
+|   |   +-- 25.1.7 Ancilla qubit
+|   |   +-- 25.1.8 Data qubit
+|   |   +-- 25.1.9 Communication qubit
+|   |   +-- 25.1.10 Measurement qubit
+|   |
+|   +-- 25.2 Qubit Identity
+|   |   +-- 25.2.1 Qubit identifier
+|   |   +-- 25.2.2 Register identifier
+|   |   +-- 25.2.3 Register position
+|   |   +-- 25.2.4 Physical location
+|   |   +-- 25.2.5 Logical assignment
+|   |   +-- 25.2.6 Hardware address
+|   |   +-- 25.2.7 Connectivity neighborhood
+|   |   +-- 25.2.8 Allocation status
+|   |
+|   +-- 25.3 Qubit State
+|       +-- 25.3.1 Computational state zero
+|       +-- 25.3.2 Computational state one
+|       +-- 25.3.3 Superposition state
+|       +-- 25.3.4 Entangled state
+|       +-- 25.3.5 Mixed state
+|       +-- 25.3.6 Pure state
+|       +-- 25.3.7 Unknown state
+|       +-- 25.3.8 Invalid state representation
+|
++-- 26. QUANTUM STATE TAXONOMY
+|   |
+|   +-- 26.1 State Representation
+|   |   +-- 26.1.1 Ket representation
+|   |   +-- 26.1.2 Bra representation
+|   |   +-- 26.1.3 Statevector
+|   |   +-- 26.1.4 Density matrix
+|   |   +-- 26.1.5 Stabilizer representation
+|   |   +-- 26.1.6 Tensor-network representation
+|   |   +-- 26.1.7 Quasiprobability representation
+|   |   +-- 26.1.8 Symbolic state
+|   |
+|   +-- 26.2 State Property
+|   |   +-- 26.2.1 Amplitude
+|   |   +-- 26.2.2 Phase
+|   |   +-- 26.2.3 Relative phase
+|   |   +-- 26.2.4 Probability
+|   |   +-- 26.2.5 Normalization
+|   |   +-- 26.2.6 Purity
+|   |   +-- 26.2.7 Fidelity
+|   |   +-- 26.2.8 Entropy
+|   |
+|   +-- 26.3 State Validity
+|   |   +-- 26.3.1 Normalized state
+|   |   +-- 26.3.2 Non-normalized state
+|   |   +-- 26.3.3 Positive semidefinite state
+|   |   +-- 26.3.4 Nonphysical state
+|   |   +-- 26.3.5 Trace-one density matrix
+|   |   +-- 26.3.6 Hermitian density matrix
+|   |   +-- 26.3.7 Dimensionally valid state
+|   |   +-- 26.3.8 Dimensionally invalid state
+|   |
+|   +-- 26.4 Multipartite State
+|       +-- 26.4.1 Product state
+|       +-- 26.4.2 Separable state
+|       +-- 26.4.3 Bipartite entangled state
+|       +-- 26.4.4 Multipartite entangled state
+|       +-- 26.4.5 Bell state
+|       +-- 26.4.6 GHZ state
+|       +-- 26.4.7 W state
+|       +-- 26.4.8 Cluster state
+|
++-- 27. QUANTUM REGISTER TAXONOMY
+|   |
+|   +-- 27.1 Register Identity
+|   |   +-- 27.1.1 Register name
+|   |   +-- 27.1.2 Register identifier
+|   |   +-- 27.1.3 Register type
+|   |   +-- 27.1.4 Register width
+|   |   +-- 27.1.5 Register namespace
+|   |   +-- 27.1.6 Register lifetime
+|   |
+|   +-- 27.2 Register Type
+|   |   +-- 27.2.1 Quantum register
+|   |   +-- 27.2.2 Classical register
+|   |   +-- 27.2.3 Ancilla register
+|   |   +-- 27.2.4 Syndrome register
+|   |   +-- 27.2.5 Measurement register
+|   |   +-- 27.2.6 Workspace register
+|   |
+|   +-- 27.3 Register Relationship
+|       +-- 27.3.1 Contains qubit
+|       +-- 27.3.2 Contains classical bit
+|       +-- 27.3.3 Aliases register
+|       +-- 27.3.4 Overlaps register
+|       +-- 27.3.5 Controls register
+|       +-- 27.3.6 Receives measurement from
+|
++-- 28. QUANTUM OPERATION TAXONOMY
+|   |
+|   +-- 28.1 Operation Identity
+|   |   +-- 28.1.1 Operation name
+|   |   +-- 28.1.2 Operation symbol
+|   |   +-- 28.1.3 Operation identifier
+|   |   +-- 28.1.4 Operation arity
+|   |   +-- 28.1.5 Operation parameters
+|   |   +-- 28.1.6 Operation duration
+|   |   +-- 28.1.7 Operation position
+|   |   +-- 28.1.8 Operation status
+|   |
+|   +-- 28.2 Single-Qubit Gate
+|   |   +-- 28.2.1 Identity gate
+|   |   +-- 28.2.2 Pauli-X gate
+|   |   +-- 28.2.3 Pauli-Y gate
+|   |   +-- 28.2.4 Pauli-Z gate
+|   |   +-- 28.2.5 Hadamard gate
+|   |   +-- 28.2.6 Phase gate
+|   |   +-- 28.2.7 T gate
+|   |   +-- 28.2.8 Rotation-X gate
+|   |   +-- 28.2.9 Rotation-Y gate
+|   |   +-- 28.2.10 Rotation-Z gate
+|   |
+|   +-- 28.3 Multi-Qubit Gate
+|   |   +-- 28.3.1 Controlled-X gate
+|   |   +-- 28.3.2 Controlled-Z gate
+|   |   +-- 28.3.3 Controlled-phase gate
+|   |   +-- 28.3.4 SWAP gate
+|   |   +-- 28.3.5 Controlled-SWAP gate
+|   |   +-- 28.3.6 Toffoli gate
+|   |   +-- 28.3.7 Native entangling gate
+|   |   +-- 28.3.8 Multi-controlled gate
+|   |
+|   +-- 28.4 Non-Unitary Operation
+|   |   +-- 28.4.1 Initialization
+|   |   +-- 28.4.2 Reset
+|   |   +-- 28.4.3 Measurement
+|   |   +-- 28.4.4 Post-selection
+|   |   +-- 28.4.5 State preparation
+|   |   +-- 28.4.6 Noise channel
+|   |   +-- 28.4.7 Discard operation
+|   |
+|   +-- 28.5 Operation Property
+|       +-- 28.5.1 Unitary
+|       +-- 28.5.2 Hermitian
+|       +-- 28.5.3 Reversible
+|       +-- 28.5.4 Controlled
+|       +-- 28.5.5 Parameterized
+|       +-- 28.5.6 Native
+|       +-- 28.5.7 Decomposed
+|       +-- 28.5.8 Fault-tolerant
+|
++-- 29. QUANTUM CIRCUIT TAXONOMY
+|   |
+|   +-- 29.1 Circuit Identity
+|   |   +-- 29.1.1 Circuit name
+|   |   +-- 29.1.2 Circuit identifier
+|   |   +-- 29.1.3 Circuit version
+|   |   +-- 29.1.4 Circuit source
+|   |   +-- 29.1.5 Circuit format
+|   |   +-- 29.1.6 Circuit hash
+|   |   +-- 29.1.7 Circuit status
+|   |
+|   +-- 29.2 Circuit Dimension
+|   |   +-- 29.2.1 Qubit width
+|   |   +-- 29.2.2 Classical-bit width
+|   |   +-- 29.2.3 Operation count
+|   |   +-- 29.2.4 Gate count
+|   |   +-- 29.2.5 Circuit depth
+|   |   +-- 29.2.6 Two-qubit-gate depth
+|   |   +-- 29.2.7 Measurement count
+|   |   +-- 29.2.8 Parameter count
+|   |
+|   +-- 29.3 Circuit Structure
+|   |   +-- 29.3.1 Preparation stage
+|   |   +-- 29.3.2 Evolution stage
+|   |   +-- 29.3.3 Oracle stage
+|   |   +-- 29.3.4 Entanglement stage
+|   |   +-- 29.3.5 Uncomputation stage
+|   |   +-- 29.3.6 Measurement stage
+|   |   +-- 29.3.7 Classical-feedback stage
+|   |   +-- 29.3.8 Repetition stage
+|   |
+|   +-- 29.4 Circuit Control
+|       +-- 29.4.1 Static circuit
+|       +-- 29.4.2 Dynamic circuit
+|       +-- 29.4.3 Mid-circuit measurement
+|       +-- 29.4.4 Conditional operation
+|       +-- 29.4.5 Classical feed-forward
+|       +-- 29.4.6 Loop construct
+|       +-- 29.4.7 Branch construct
+|       +-- 29.4.8 Adaptive circuit
+|
++-- 30. CIRCUIT REPRESENTATION TAXONOMY
+|   |
+|   +-- 30.1 Source Representation
+|   |   +-- 30.1.1 Graphical circuit
+|   |   +-- 30.1.2 Quantum source code
+|   |   +-- 30.1.3 Assembly representation
+|   |   +-- 30.1.4 Intermediate representation
+|   |   +-- 30.1.5 Pulse representation
+|   |   +-- 30.1.6 Serialized circuit
+|   |
+|   +-- 30.2 Representation Element
+|   |   +-- 30.2.1 Wire
+|   |   +-- 30.2.2 Gate node
+|   |   +-- 30.2.3 Control node
+|   |   +-- 30.2.4 Measurement node
+|   |   +-- 30.2.5 Barrier
+|   |   +-- 30.2.6 Parameter expression
+|   |   +-- 30.2.7 Timing annotation
+|   |   +-- 30.2.8 Calibration annotation
+|   |
+|   +-- 30.3 Representation Validity
+|       +-- 30.3.1 Parseable representation
+|       +-- 30.3.2 Unparseable representation
+|       +-- 30.3.3 Supported instruction
+|       +-- 30.3.4 Unsupported instruction
+|       +-- 30.3.5 Well-typed operation
+|       +-- 30.3.6 Type mismatch
+|       +-- 30.3.7 Valid qubit reference
+|       +-- 30.3.8 Invalid qubit reference
+|
++-- 31. COMPILATION TAXONOMY
+|   |
+|   +-- 31.1 Compilation Stage
+|   |   +-- 31.1.1 Parsing
+|   |   +-- 31.1.2 Semantic analysis
+|   |   +-- 31.1.3 Circuit synthesis
+|   |   +-- 31.1.4 Gate decomposition
+|   |   +-- 31.1.5 Qubit mapping
+|   |   +-- 31.1.6 Routing
+|   |   +-- 31.1.7 Scheduling
+|   |   +-- 31.1.8 Pulse lowering
+|   |
+|   +-- 31.2 Compilation Transformation
+|   |   +-- 31.2.1 Gate cancellation
+|   |   +-- 31.2.2 Gate fusion
+|   |   +-- 31.2.3 Commutation
+|   |   +-- 31.2.4 Ancilla introduction
+|   |   +-- 31.2.5 SWAP insertion
+|   |   +-- 31.2.6 Basis translation
+|   |   +-- 31.2.7 Approximate synthesis
+|   |   +-- 31.2.8 Control-flow lowering
+|   |
+|   +-- 31.3 Compilation Output
+|       +-- 31.3.1 Logical circuit
+|       +-- 31.3.2 Transpiled circuit
+|       +-- 31.3.3 Routed circuit
+|       +-- 31.3.4 Scheduled circuit
+|       +-- 31.3.5 Pulse schedule
+|       +-- 31.3.6 Executable package
+|       +-- 31.3.7 Compilation report
+|       +-- 31.3.8 Transformation mapping
+|
++-- 32. QUANTUM HARDWARE TAXONOMY
+|   |
+|   +-- 32.1 Hardware Identity
+|   |   +-- 32.1.1 Device name
+|   |   +-- 32.1.2 Device identifier
+|   |   +-- 32.1.3 Processor generation
+|   |   +-- 32.1.4 Hardware provider
+|   |   +-- 32.1.5 Device location
+|   |   +-- 32.1.6 Firmware version
+|   |   +-- 32.1.7 Calibration version
+|   |   +-- 32.1.8 Availability status
+|   |
+|   +-- 32.2 Qubit Modality
+|   |   +-- 32.2.1 Superconducting qubit
+|   |   +-- 32.2.2 Trapped-ion qubit
+|   |   +-- 32.2.3 Neutral-atom qubit
+|   |   +-- 32.2.4 Photonic qubit
+|   |   +-- 32.2.5 Spin qubit
+|   |   +-- 32.2.6 Quantum-dot qubit
+|   |   +-- 32.2.7 Defect-center qubit
+|   |   +-- 32.2.8 Topological-qubit candidate
+|   |
+|   +-- 32.3 Hardware Topology
+|   |   +-- 32.3.1 Linear topology
+|   |   +-- 32.3.2 Grid topology
+|   |   +-- 32.3.3 Ring topology
+|   |   +-- 32.3.4 Heavy-hex topology
+|   |   +-- 32.3.5 All-to-all topology
+|   |   +-- 32.3.6 Reconfigurable topology
+|   |   +-- 32.3.7 Modular topology
+|   |   +-- 32.3.8 Directed coupling graph
+|   |
+|   +-- 32.4 Hardware Capability
+|       +-- 32.4.1 Physical-qubit count
+|       +-- 32.4.2 Available-qubit count
+|       +-- 32.4.3 Native gate set
+|       +-- 32.4.4 Mid-circuit measurement support
+|       +-- 32.4.5 Reset support
+|       +-- 32.4.6 Classical-feedback support
+|       +-- 32.4.7 Pulse-control support
+|       +-- 32.4.8 Maximum circuit limits
+|
++-- 33. CALIBRATION AND CONTROL TAXONOMY
+|   |
+|   +-- 33.1 Calibration Record
+|   |   +-- 33.1.1 Calibration identifier
+|   |   +-- 33.1.2 Calibration timestamp
+|   |   +-- 33.1.3 Calibration method
+|   |   +-- 33.1.4 Calibration target
+|   |   +-- 33.1.5 Calibration value
+|   |   +-- 33.1.6 Calibration uncertainty
+|   |   +-- 33.1.7 Calibration validity period
+|   |
+|   +-- 33.2 Qubit Metric
+|   |   +-- 33.2.1 Energy-relaxation time
+|   |   +-- 33.2.2 Dephasing time
+|   |   +-- 33.2.3 Qubit frequency
+|   |   +-- 33.2.4 Readout error
+|   |   +-- 33.2.5 Reset error
+|   |   +-- 33.2.6 Leakage rate
+|   |   +-- 33.2.7 Thermal population
+|   |
+|   +-- 33.3 Gate Metric
+|   |   +-- 33.3.1 Gate duration
+|   |   +-- 33.3.2 Gate error
+|   |   +-- 33.3.3 Gate fidelity
+|   |   +-- 33.3.4 Crosstalk metric
+|   |   +-- 33.3.5 Control amplitude
+|   |   +-- 33.3.6 Control phase
+|   |
+|   +-- 33.4 Control Object
+|       +-- 33.4.1 Pulse
+|       +-- 33.4.2 Pulse envelope
+|       +-- 33.4.3 Pulse channel
+|       +-- 33.4.4 Pulse frequency
+|       +-- 33.4.5 Pulse amplitude
+|       +-- 33.4.6 Pulse phase
+|       +-- 33.4.7 Pulse duration
+|       +-- 33.4.8 Pulse schedule
+|
++-- 34. QUANTUM NOISE TAXONOMY
+|   |
+|   +-- 34.1 Noise Identity
+|   |   +-- 34.1.1 Noise-model identifier
+|   |   +-- 34.1.2 Noise source
+|   |   +-- 34.1.3 Noise channel
+|   |   +-- 34.1.4 Noise parameter
+|   |   +-- 34.1.5 Noise strength
+|   |   +-- 34.1.6 Noise correlation
+|   |   +-- 34.1.7 Noise stationarity
+|   |   +-- 34.1.8 Noise confidence
+|   |
+|   +-- 34.2 Quantum Noise Type
+|   |   +-- 34.2.1 Bit-flip noise
+|   |   +-- 34.2.2 Phase-flip noise
+|   |   +-- 34.2.3 Depolarizing noise
+|   |   +-- 34.2.4 Amplitude damping
+|   |   +-- 34.2.5 Phase damping
+|   |   +-- 34.2.6 Readout noise
+|   |   +-- 34.2.7 Leakage
+|   |   +-- 34.2.8 Crosstalk
+|   |   +-- 34.2.9 Coherent-control error
+|   |   +-- 34.2.10 Correlated noise
+|   |
+|   +-- 34.3 Noise Scope
+|       +-- 34.3.1 Single-qubit noise
+|       +-- 34.3.2 Multi-qubit noise
+|       +-- 34.3.3 Gate-dependent noise
+|       +-- 34.3.4 Time-dependent noise
+|       +-- 34.3.5 Spatially correlated noise
+|       +-- 34.3.6 Temporally correlated noise
+|       +-- 34.3.7 Markovian noise
+|       +-- 34.3.8 Non-Markovian noise
+|
++-- 35. ERROR-HANDLING TAXONOMY
+|   |
+|   +-- 35.1 Error Suppression
+|   |   +-- 35.1.1 Pulse optimization
+|   |   +-- 35.1.2 Dynamical decoupling
+|   |   +-- 35.1.3 Echo sequence
+|   |   +-- 35.1.4 Crosstalk-aware scheduling
+|   |   +-- 35.1.5 Noise-aware mapping
+|   |   +-- 35.1.6 Leakage suppression
+|   |
+|   +-- 35.2 Error Mitigation
+|   |   +-- 35.2.1 Readout-error mitigation
+|   |   +-- 35.2.2 Zero-noise extrapolation
+|   |   +-- 35.2.3 Probabilistic error cancellation
+|   |   +-- 35.2.4 Symmetry verification
+|   |   +-- 35.2.5 Pauli twirling
+|   |   +-- 35.2.6 Virtual distillation
+|   |   +-- 35.2.7 Post-selection
+|   |   +-- 35.2.8 Operator backpropagation
+|   |
+|   +-- 35.3 Quantum Error Correction
+|   |   +-- 35.3.1 Error-detecting code
+|   |   +-- 35.3.2 Error-correcting code
+|   |   +-- 35.3.3 Stabilizer code
+|   |   +-- 35.3.4 Surface code
+|   |   +-- 35.3.5 Color code
+|   |   +-- 35.3.6 Bosonic code
+|   |   +-- 35.3.7 Quantum LDPC code
+|   |   +-- 35.3.8 Concatenated code
+|   |
+|   +-- 35.4 Syndrome Processing
+|   |   +-- 35.4.1 Syndrome measurement
+|   |   +-- 35.4.2 Syndrome record
+|   |   +-- 35.4.3 Detection event
+|   |   +-- 35.4.4 Decoder input
+|   |   +-- 35.4.5 Decoder output
+|   |   +-- 35.4.6 Recovery operation
+|   |   +-- 35.4.7 Logical-error indication
+|   |
+|   +-- 35.5 Fault-Tolerance Property
+|       +-- 35.5.1 Code distance
+|       +-- 35.5.2 Physical error rate
+|       +-- 35.5.3 Logical error rate
+|       +-- 35.5.4 Threshold condition
+|       +-- 35.5.5 Fault-tolerant gate
+|       +-- 35.5.6 Transversal gate
+|       +-- 35.5.7 Magic-state injection
+|       +-- 35.5.8 Magic-state distillation
+|
++-- 36. QUANTUM EXECUTION TAXONOMY
+|   |
+|   +-- 36.1 Execution Identity
+|   |   +-- 36.1.1 Job identifier
+|   |   +-- 36.1.2 Session identifier
+|   |   +-- 36.1.3 Batch identifier
+|   |   +-- 36.1.4 Backend identifier
+|   |   +-- 36.1.5 Submission timestamp
+|   |   +-- 36.1.6 Start timestamp
+|   |   +-- 36.1.7 Completion timestamp
+|   |   +-- 36.1.8 Execution status
+|   |
+|   +-- 36.2 Execution Target
+|   |   +-- 36.2.1 Physical quantum processor
+|   |   +-- 36.2.2 Ideal simulator
+|   |   +-- 36.2.3 Noisy simulator
+|   |   +-- 36.2.4 Statevector simulator
+|   |   +-- 36.2.5 Density-matrix simulator
+|   |   +-- 36.2.6 Stabilizer simulator
+|   |   +-- 36.2.7 Tensor-network simulator
+|   |   +-- 36.2.8 Resource estimator
+|   |
+|   +-- 36.3 Execution Parameter
+|   |   +-- 36.3.1 Shot count
+|   |   +-- 36.3.2 Random seed
+|   |   +-- 36.3.3 Parameter binding
+|   |   +-- 36.3.4 Optimization level
+|   |   +-- 36.3.5 Resilience level
+|   |   +-- 36.3.6 Timeout
+|   |   +-- 36.3.7 Queue priority
+|   |   +-- 36.3.8 Error budget
+|   |
+|   +-- 36.4 Execution Outcome
+|       +-- 36.4.1 Successful execution
+|       +-- 36.4.2 Failed execution
+|       +-- 36.4.3 Cancelled execution
+|       +-- 36.4.4 Timed-out execution
+|       +-- 36.4.5 Partial execution
+|       +-- 36.4.6 Rejected execution
+|       +-- 36.4.7 Hardware interruption
+|       +-- 36.4.8 Indeterminate execution
+|
++-- 37. MEASUREMENT TAXONOMY
+|   |
+|   +-- 37.1 Measurement Definition
+|   |   +-- 37.1.1 Measurement identifier
+|   |   +-- 37.1.2 Measurement basis
+|   |   +-- 37.1.3 Measured qubit
+|   |   +-- 37.1.4 Classical destination
+|   |   +-- 37.1.5 Measurement position
+|   |   +-- 37.1.6 Measurement duration
+|   |
+|   +-- 37.2 Measurement Basis
+|   |   +-- 37.2.1 Computational basis
+|   |   +-- 37.2.2 Pauli-X basis
+|   |   +-- 37.2.3 Pauli-Y basis
+|   |   +-- 37.2.4 Pauli-Z basis
+|   |   +-- 37.2.5 Bell basis
+|   |   +-- 37.2.6 Arbitrary basis
+|   |
+|   +-- 37.3 Measurement Result
+|   |   +-- 37.3.1 Single-shot result
+|   |   +-- 37.3.2 Bitstring result
+|   |   +-- 37.3.3 Count distribution
+|   |   +-- 37.3.4 Probability distribution
+|   |   +-- 37.3.5 Expectation value
+|   |   +-- 37.3.6 Variance
+|   |   +-- 37.3.7 Confidence interval
+|   |   +-- 37.3.8 Quasiprobability result
+|   |
+|   +-- 37.4 Measurement Quality
+|       +-- 37.4.1 Assignment fidelity
+|       +-- 37.4.2 Readout bias
+|       +-- 37.4.3 Sampling uncertainty
+|       +-- 37.4.4 Mitigated result
+|       +-- 37.4.5 Unmitigated result
+|       +-- 37.4.6 Post-selected result
+|
++-- 38. QUANTUM ALGORITHM TAXONOMY
+|   |
+|   +-- 38.1 Algorithm Identity
+|   |   +-- 38.1.1 Algorithm name
+|   |   +-- 38.1.2 Algorithm identifier
+|   |   +-- 38.1.3 Algorithm family
+|   |   +-- 38.1.4 Algorithm version
+|   |   +-- 38.1.5 Problem class
+|   |   +-- 38.1.6 Input model
+|   |   +-- 38.1.7 Output model
+|   |
+|   +-- 38.2 Algorithm Family
+|   |   +-- 38.2.1 Search algorithm
+|   |   +-- 38.2.2 Factoring algorithm
+|   |   +-- 38.2.3 Simulation algorithm
+|   |   +-- 38.2.4 Optimization algorithm
+|   |   +-- 38.2.5 Linear-algebra algorithm
+|   |   +-- 38.2.6 Amplitude-estimation algorithm
+|   |   +-- 38.2.7 Machine-learning algorithm
+|   |   +-- 38.2.8 Cryptographic algorithm
+|   |
+|   +-- 38.3 Variational Algorithm
+|   |   +-- 38.3.1 Parameterized ansatz
+|   |   +-- 38.3.2 Objective function
+|   |   +-- 38.3.3 Classical optimizer
+|   |   +-- 38.3.4 Parameter update
+|   |   +-- 38.3.5 Convergence criterion
+|   |   +-- 38.3.6 Optimization iteration
+|   |   +-- 38.3.7 Gradient estimate
+|   |   +-- 38.3.8 Barren-plateau indicator
+|   |
+|   +-- 38.4 Algorithm Correctness
+|       +-- 38.4.1 Exact algorithm
+|       +-- 38.4.2 Approximate algorithm
+|       +-- 38.4.3 Heuristic algorithm
+|       +-- 38.4.4 Probabilistic correctness
+|       +-- 38.4.5 Verified output
+|       +-- 38.4.6 Classically validated output
+|       +-- 38.4.7 Unverified output
+|
++-- 39. RESOURCE ESTIMATION TAXONOMY
+|   |
+|   +-- 39.1 Estimation Input
+|   |   +-- 39.1.1 Application model
+|   |   +-- 39.1.2 Hardware architecture model
+|   |   +-- 39.1.3 Error-correction model
+|   |   +-- 39.1.4 Error budget
+|   |   +-- 39.1.5 Gate-time assumption
+|   |   +-- 39.1.6 Physical-error assumption
+|   |   +-- 39.1.7 Distillation model
+|   |   +-- 39.1.8 Optimization objective
+|   |
+|   +-- 39.2 Logical Resource
+|   |   +-- 39.2.1 Logical-qubit count
+|   |   +-- 39.2.2 Logical-gate count
+|   |   +-- 39.2.3 Logical circuit depth
+|   |   +-- 39.2.4 T-gate count
+|   |   +-- 39.2.5 T-depth
+|   |   +-- 39.2.6 Rotation count
+|   |   +-- 39.2.7 Measurement count
+|   |   +-- 39.2.8 Logical runtime
+|   |
+|   +-- 39.3 Physical Resource
+|   |   +-- 39.3.1 Physical-qubit count
+|   |   +-- 39.3.2 Data-qubit count
+|   |   +-- 39.3.3 Ancilla-qubit count
+|   |   +-- 39.3.4 Factory-qubit count
+|   |   +-- 39.3.5 Code-cycle count
+|   |   +-- 39.3.6 Physical runtime
+|   |   +-- 39.3.7 Energy estimate
+|   |   +-- 39.3.8 Communication overhead
+|   |
+|   +-- 39.4 Distillation Resource
+|   |   +-- 39.4.1 Magic-state type
+|   |   +-- 39.4.2 Factory count
+|   |   +-- 39.4.3 Factory rounds
+|   |   +-- 39.4.4 Factory throughput
+|   |   +-- 39.4.5 Factory failure probability
+|   |   +-- 39.4.6 Distillation-space overhead
+|   |   +-- 39.4.7 Distillation-time overhead
+|   |
+|   +-- 39.5 Estimation Quality
+|       +-- 39.5.1 Deterministic estimate
+|       +-- 39.5.2 Parameterized estimate
+|       +-- 39.5.3 Lower bound
+|       +-- 39.5.4 Upper bound
+|       +-- 39.5.5 Sensitivity result
+|       +-- 39.5.6 Assumption-dependent result
+|       +-- 39.5.7 Incomplete estimate
+|       +-- 39.5.8 Infeasible estimate
+|
++-- 40. QUANTUM PERFORMANCE TAXONOMY
+|   |
+|   +-- 40.1 Circuit Performance
+|   |   +-- 40.1.1 Execution time
+|   |   +-- 40.1.2 Queue time
+|   |   +-- 40.1.3 Compilation time
+|   |   +-- 40.1.4 Sampling time
+|   |   +-- 40.1.5 Classical-processing time
+|   |   +-- 40.1.6 End-to-end latency
+|   |
+|   +-- 40.2 Result Performance
+|   |   +-- 40.2.1 State fidelity
+|   |   +-- 40.2.2 Process fidelity
+|   |   +-- 40.2.3 Distribution distance
+|   |   +-- 40.2.4 Expectation-value error
+|   |   +-- 40.2.5 Success probability
+|   |   +-- 40.2.6 Approximation ratio
+|   |   +-- 40.2.7 Statistical precision
+|   |
+|   +-- 40.3 Scaling Property
+|       +-- 40.3.1 Qubit scaling
+|       +-- 40.3.2 Gate-count scaling
+|       +-- 40.3.3 Depth scaling
+|       +-- 40.3.4 Runtime scaling
+|       +-- 40.3.5 Sampling-overhead scaling
+|       +-- 40.3.6 Error-correction scaling
+|       +-- 40.3.7 Classical-memory scaling
+|       +-- 40.3.8 Communication scaling
+|
++-- 41. QUANTUM VALIDATION RULE TAXONOMY
+|   |
+|   +-- 41.1 State Rule
+|   |   +-- 41.1.1 State must be normalized
+|   |   +-- 41.1.2 Density matrix must be Hermitian
+|   |   +-- 41.1.3 Density matrix must have unit trace
+|   |   +-- 41.1.4 State dimension must match qubit count
+|   |   +-- 41.1.5 Probabilities must be nonnegative
+|   |   +-- 41.1.6 Probabilities must sum to one
+|   |
+|   +-- 41.2 Operation Rule
+|   |   +-- 41.2.1 Gate arity must match operands
+|   |   +-- 41.2.2 Gate matrix must be unitary
+|   |   +-- 41.2.3 Control and target must differ
+|   |   +-- 41.2.4 Parameter must be defined
+|   |   +-- 41.2.5 Parameter must be within domain
+|   |   +-- 41.2.6 Operation must be backend-supported
+|   |
+|   +-- 41.3 Circuit Rule
+|   |   +-- 41.3.1 Qubit reference must exist
+|   |   +-- 41.3.2 Classical reference must exist
+|   |   +-- 41.3.3 Measurement target must exist
+|   |   +-- 41.3.4 Conditional source must be measured
+|   |   +-- 41.3.5 Circuit width must fit backend
+|   |   +-- 41.3.6 Circuit depth must fit execution limit
+|   |   +-- 41.3.7 Native connectivity must be satisfied
+|   |   +-- 41.3.8 Unsupported operation prohibited
+|   |
+|   +-- 41.4 Execution Rule
+|   |   +-- 41.4.1 Shot count must be positive
+|   |   +-- 41.4.2 Backend must be available
+|   |   +-- 41.4.3 Calibration must be applicable
+|   |   +-- 41.4.4 Result schema must match request
+|   |   +-- 41.4.5 Mitigation configuration must be recorded
+|   |   +-- 41.4.6 Random seed should be preserved
+|   |
+|   +-- 41.5 Fault-Tolerance Rule
+|       +-- 41.5.1 Logical error must fit error budget
+|       +-- 41.5.2 Code distance must be sufficient
+|       +-- 41.5.3 Factory output must meet fidelity target
+|       +-- 41.5.4 Decoder must match code
+|       +-- 41.5.5 Syndrome history must be complete
+|       +-- 41.5.6 Recovery must preserve logical state
+|
++-- 42. QUANTUM ANOMALY TAXONOMY
+|   |
+|   +-- 42.1 State Anomaly
+|   |   +-- 42.1.1 Normalization failure
+|   |   +-- 42.1.2 Nonphysical density matrix
+|   |   +-- 42.1.3 Unexpected phase
+|   |   +-- 42.1.4 Unexpected population
+|   |   +-- 42.1.5 Entanglement loss
+|   |   +-- 42.1.6 State-preparation error
+|   |
+|   +-- 42.2 Circuit Anomaly
+|   |   +-- 42.2.1 Missing gate
+|   |   +-- 42.2.2 Extra gate
+|   |   +-- 42.2.3 Misordered gate
+|   |   +-- 42.2.4 Incorrect control
+|   |   +-- 42.2.5 Incorrect target
+|   |   +-- 42.2.6 Invalid parameter
+|   |   +-- 42.2.7 Uninitialized qubit
+|   |   +-- 42.2.8 Unmeasured output
+|   |
+|   +-- 42.3 Hardware Anomaly
+|   |   +-- 42.3.1 Qubit unavailable
+|   |   +-- 42.3.2 Calibration drift
+|   |   +-- 42.3.3 Elevated gate error
+|   |   +-- 42.3.4 Elevated readout error
+|   |   +-- 42.3.5 Excessive leakage
+|   |   +-- 42.3.6 Excessive crosstalk
+|   |   +-- 42.3.7 Control failure
+|   |   +-- 42.3.8 Cryogenic interruption
+|   |
+|   +-- 42.4 Result Anomaly
+|       +-- 42.4.1 Impossible bitstring
+|       +-- 42.4.2 Missing shot
+|       +-- 42.4.3 Excess shot
+|       +-- 42.4.4 Probability-sum mismatch
+|       +-- 42.4.5 Unexpected distribution
+|       +-- 42.4.6 Excessive statistical variance
+|       +-- 42.4.7 Classical-validation mismatch
+|       +-- 42.4.8 Mitigation-induced instability
+|
++-- 43. QUANTUM PROVENANCE TAXONOMY
+|   |
+|   +-- 43.1 Program Provenance
+|   |   +-- 43.1.1 Source repository
+|   |   +-- 43.1.2 Source commit
+|   |   +-- 43.1.3 Source branch
+|   |   +-- 43.1.4 Source file
+|   |   +-- 43.1.5 Source line
+|   |   +-- 43.1.6 Package version
+|   |
+|   +-- 43.2 Compilation Provenance
+|   |   +-- 43.2.1 Compiler name
+|   |   +-- 43.2.2 Compiler version
+|   |   +-- 43.2.3 Compilation options
+|   |   +-- 43.2.4 Transformation sequence
+|   |   +-- 43.2.5 Mapping seed
+|   |   +-- 43.2.6 Target instruction set
+|   |
+|   +-- 43.3 Hardware Provenance
+|   |   +-- 43.3.1 Backend snapshot
+|   |   +-- 43.3.2 Topology snapshot
+|   |   +-- 43.3.3 Calibration snapshot
+|   |   +-- 43.3.4 Noise-model snapshot
+|   |   +-- 43.3.5 Firmware snapshot
+|   |   +-- 43.3.6 Provider job reference
+|   |
+|   +-- 43.4 Result Provenance
+|       +-- 43.4.1 Raw-result reference
+|       +-- 43.4.2 Mitigated-result reference
+|       +-- 43.4.3 Post-processing code
+|       +-- 43.4.4 Post-processing parameters
+|       +-- 43.4.5 Random seed
+|       +-- 43.4.6 Validation reference
+|
++-- 44. QUANTUM REPRODUCIBILITY TAXONOMY
+|   |
+|   +-- 44.1 Reproduction Input
+|   |   +-- 44.1.1 Original circuit
+|   |   +-- 44.1.2 Transpiled circuit
+|   |   +-- 44.1.3 Backend configuration
+|   |   +-- 44.1.4 Calibration snapshot
+|   |   +-- 44.1.5 Shot count
+|   |   +-- 44.1.6 Random seed
+|   |   +-- 44.1.7 Mitigation configuration
+|   |   +-- 44.1.8 Software environment
+|   |
+|   +-- 44.2 Reproduction Mode
+|   |   +-- 44.2.1 Exact simulation
+|   |   +-- 44.2.2 Seeded simulation
+|   |   +-- 44.2.3 Hardware rerun
+|   |   +-- 44.2.4 Noise-model replay
+|   |   +-- 44.2.5 Statistical reproduction
+|   |   +-- 44.2.6 Cross-backend reproduction
+|   |
+|   +-- 44.3 Reproduction Result
+|       +-- 44.3.1 Exactly reproduced
+|       +-- 44.3.2 Statistically reproduced
+|       +-- 44.3.3 Partially reproduced
+|       +-- 44.3.4 Not reproduced
+|       +-- 44.3.5 Environment unavailable
+|       +-- 44.3.6 Hardware state unavailable
+|       +-- 44.3.7 Reproduction indeterminate
+|
++-- 45. QUANTUM KNOWLEDGE GRAPH EXTENSION
+|   |
+|   +-- 45.1 Quantum Node Type
+|   |   +-- 45.1.1 Qubit node
+|   |   +-- 45.1.2 Register node
+|   |   +-- 45.1.3 State node
+|   |   +-- 45.1.4 Gate node
+|   |   +-- 45.1.5 Circuit node
+|   |   +-- 45.1.6 Algorithm node
+|   |   +-- 45.1.7 Backend node
+|   |   +-- 45.1.8 Calibration node
+|   |   +-- 45.1.9 Noise-model node
+|   |   +-- 45.1.10 Execution node
+|   |   +-- 45.1.11 Measurement node
+|   |   +-- 45.1.12 Resource-estimate node
+|   |
+|   +-- 45.2 Quantum Edge Type
+|   |   +-- 45.2.1 Acts on
+|   |   +-- 45.2.2 Controls
+|   |   +-- 45.2.3 Entangles with
+|   |   +-- 45.2.4 Measures
+|   |   +-- 45.2.5 Produces
+|   |   +-- 45.2.6 Compiles to
+|   |   +-- 45.2.7 Executes on
+|   |   +-- 45.2.8 Calibrated by
+|   |   +-- 45.2.9 Affected by
+|   |   +-- 45.2.10 Mitigated by
+|   |   +-- 45.2.11 Encoded by
+|   |   +-- 45.2.12 Decoded by
+|   |
+|   +-- 45.3 Quantum Graph Property
+|       +-- 45.3.1 Quantum-object identifier
+|       +-- 45.3.2 Temporal validity
+|       +-- 45.3.3 Hardware applicability
+|       +-- 45.3.4 Relationship weight
+|       +-- 45.3.5 Relationship confidence
+|       +-- 45.3.6 Calibration pointer
+|       +-- 45.3.7 Execution pointer
+|       +-- 45.3.8 Provenance pointer
+|
++-- 46. QUANTUM CLASSIFICATION OUTPUT
+|   |
+|   +-- 46.1 Circuit Classification
+|   |   +-- 46.1.1 Valid circuit
+|   |   +-- 46.1.2 Invalid circuit
+|   |   +-- 46.1.3 Backend-compatible circuit
+|   |   +-- 46.1.4 Backend-incompatible circuit
+|   |   +-- 46.1.5 Noisy executable circuit
+|   |   +-- 46.1.6 Fault-tolerant circuit
+|   |   +-- 46.1.7 Resource-infeasible circuit
+|   |   +-- 46.1.8 Classification unknown
+|   |
+|   +-- 46.2 Execution Classification
+|   |   +-- 46.2.1 Successful
+|   |   +-- 46.2.2 Failed
+|   |   +-- 46.2.3 Suspicious
+|   |   +-- 46.2.4 Noise-dominated
+|   |   +-- 46.2.5 Statistically insufficient
+|   |   +-- 46.2.6 Mitigation-dependent
+|   |   +-- 46.2.7 Reproducible
+|   |   +-- 46.2.8 Non-reproducible
+|   |
+|   +-- 46.3 Quantum Confidence Classification
+|       +-- 46.3.1 Analytically confirmed
+|       +-- 46.3.2 Classically verified
+|       +-- 46.3.3 Experimentally validated
+|       +-- 46.3.4 High confidence
+|       +-- 46.3.5 Medium confidence
+|       +-- 46.3.6 Low confidence
+|       +-- 46.3.7 Unresolved
+|
++-- 47. QUANTUM DELIVERABLE TAXONOMY
+    |
+    +-- 47.1 Machine-Readable Output
+    |   +-- 47.1.1 Quantum source program
+    |   +-- 47.1.2 Logical circuit
+    |   +-- 47.1.3 Transpiled circuit
+    |   +-- 47.1.4 Pulse schedule
+    |   +-- 47.1.5 Execution configuration
+    |   +-- 47.1.6 Raw measurement records
+    |   +-- 47.1.7 Mitigated results
+    |   +-- 47.1.8 Calibration snapshot
+    |   +-- 47.1.9 Noise-model record
+    |   +-- 47.1.10 Resource-estimation result
+    |
+    +-- 47.2 Human-Readable Output
+    |   +-- 47.2.1 Circuit report
+    |   +-- 47.2.2 Hardware report
+    |   +-- 47.2.3 Noise report
+    |   +-- 47.2.4 Error-mitigation report
+    |   +-- 47.2.5 Error-correction report
+    |   +-- 47.2.6 Execution report
+    |   +-- 47.2.7 Resource-estimation report
+    |   +-- 47.2.8 Reproducibility report
+    |
+    +-- 47.3 Atomic Quantum Execution Schema
+        +-- 47.3.1 Quantum record ID
+        +-- 47.3.2 Program ID
+        +-- 47.3.3 Circuit ID
+        +-- 47.3.4 Circuit hash
+        +-- 47.3.5 Algorithm class
+        +-- 47.3.6 Backend ID
+        +-- 47.3.7 Device modality
+        +-- 47.3.8 Calibration ID
+        +-- 47.3.9 Compilation ID
+        +-- 47.3.10 Physical-qubit count
+        +-- 47.3.11 Logical-qubit count
+        +-- 47.3.12 Circuit depth
+        +-- 47.3.13 Gate count
+        +-- 47.3.14 Two-qubit-gate count
+        +-- 47.3.15 Shot count
+        +-- 47.3.16 Noise-model ID
+        +-- 47.3.17 Mitigation-method ID
+        +-- 47.3.18 Error-correction-code ID
+        +-- 47.3.19 Raw-result reference
+        +-- 47.3.20 Processed-result reference
+        +-- 47.3.21 Success probability
+        +-- 47.3.22 Result uncertainty
+        +-- 47.3.23 Physical runtime
+        +-- 47.3.24 Estimated runtime
+        +-- 47.3.25 Estimated physical qubits
+        +-- 47.3.26 Error budget
+        +-- 47.3.27 Validation class
+        +-- 47.3.28 Anomaly class
+        +-- 47.3.29 Reproduction status
+        +-- 47.3.30 Provenance reference
+        +-- 47.3.31 Audit reference
+        +-- 47.3.32 Confidence status
