@@ -1,3 +1,8 @@
+```
+===============================================================================
+TRUTH ENGINE :: EVERYDAY REALITY ADAPTER
+Module: DAILY_OCCURRENCE_ENGINE + CAUSALITY_SYMLINKS
+===============================================================================
 
 OBJECTIVE
   Adapt the Truth Engine from general truth evaluation into a practical system
@@ -816,3 +821,4 @@ PRIMARY RULE
 ===============================================================================
 END :: DAILY TRUTH ENGINE + CAUSALITY-SYMLINKS
 ===============================================================================
+```
